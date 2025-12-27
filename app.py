@@ -292,7 +292,7 @@ elif app_mode == "Text to Sign":
             
             for char in text_input:
                 if char.isalpha():
-                    img_path = f"letters&numbers/{char}.jpg"
+                    img_path = f"spelling_assets/{char}.jpg"
                     
                     if os.path.exists(img_path):
                         image_placeholder.image(img_path, width=300, caption=f"Letter: {char.upper()}")
@@ -306,11 +306,11 @@ elif app_mode == "Text to Sign":
                     time.sleep(0.75)
             for int in text_input:
                 if int.isdigit():
-                    img_path = f"letters&numbers/{int}.jpg"
+                    img_path = f"spelling_assets/{int}.jpg"
                     
                     if os.path.exists(img_path):
-                        image_placeholder.image(img_path, width=300, caption=f"Number: {char}")
-                        text_placeholder.markdown(f"## **{char}**")
+                        image_placeholder.image(img_path, width=300, caption=f"Number: {int}")
+                        text_placeholder.markdown(f"## **{int}**")
                         time.sleep(0.75) 
                     else:
                         st.error(f"Missing image for letter: {char}")
