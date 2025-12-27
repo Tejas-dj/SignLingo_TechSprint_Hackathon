@@ -1,12 +1,3 @@
-The reason your README looks "weird" (changing from normal text into code-like snippets) is due to **spacing and unclosed formatting blocks**. In Markdown, if you don't leave a blank line before a list or after a code block, GitHub gets confused and thinks everything that follows is part of the previous section.
-
-Here is your **entire README rewritten** with proper spacing, fixed code blocks, and professional GitHub "Alert" boxes for the judges.
-
----
-
-### Copy and Paste this into your `README.md`:
-
-```markdown
 # 🤟 SignLingo: AI-Powered Bidirectional Sign Language Translator
 
 **SignLingo** is a real-time accessibility tool designed to bridge the communication gap between the Deaf/Hard-of-Hearing community and the hearing world. Built with advanced Computer Vision and Generative AI, it provides seamless **Sign-to-Text** and **Text-to-Sign** translation.
