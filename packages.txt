@@ -1,0 +1,4 @@
+portaudio19-dev
+libasound2-dev
+libgl1
+libglib2.0-0

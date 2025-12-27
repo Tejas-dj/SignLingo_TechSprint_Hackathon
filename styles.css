@@ -1,0 +1,190 @@
+:root {
+    --font-main: 'Times New Roman', Times, serif;
+    
+    --shadow-color: rgba(0, 0, 0, 0.158);
+    --shadow-hover: rgba(46, 134, 193, 0.4);
+}
+
+/* --- GENERAL RESET --- */
+html, body, [class*="css"] {
+    font-family: var(--font-main);
+}
+
+/* --- MAIN APP BACKGROUND --- */
+
+.nav-link-selected {
+    /* Change #2E86C1 to whatever hex code you want */
+    background-color: #2E86C1 !important; 
+    border: 2px solid #2a44b9 !important;
+}
+
+/* --- SIDEBAR --- */
+[data-testid="stSidebar"] {
+    border-right: 1px solid var(--shadow-color);
+}
+
+/* --- HEADERS --- */
+
+.main-header {
+    background: linear-gradient(
+    45deg,
+    #4079ae,
+    #5ca9f6,
+    #484dec,
+    #2E86C1,
+    #4079ae 
+    );
+    background-size: 200% auto; 
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    animation: gradient-slide 2.5s linear infinite;
+}
+@keyframes gradient-slide {
+    0% {
+    background-position: 0% 50%;
+    }
+    100% {
+    background-position: 100% 50%;
+    }
+}
+
+.sub-header {
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* --- SIDEBAR LOGO BOX --- */
+
+
+
+
+/* --- FEATURE CARDS (HOME) --- */
+.feature-card {
+    /* Removed background-color: transparent by default now */
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 3px solid rgba(128, 128, 128, 0.2); 
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px var(--shadow-hover);
+}
+
+/* --- BUTTONS --- */
+div.stButton > button {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+div.stButton > button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px var(--shadow-hover);
+}
+
+/* --- SIGN TO TEXT: SENTENCE DISPLAY --- */
+.sentence-box {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--shadow-color);
+    text-align: left;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.sentence-box h3 {
+    margin: 0;
+}
+
+
+
+/* ---x-- LEARN ASL: GAME UI --x--- */
+.score-card {
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 3px solid rgba(128, 128, 128, 0.2); 
+}
+
+.score-card h3 {
+    margin: 0;
+}
+
+.score-card h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.challenge-card {
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 3px solid rgba(128, 128, 128, 0.2); 
+}
+.challenge-card h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    margin: 20 0 10px 0;
+    text-shadow: 0px 4px 10px var(--shadow-color);
+}
+
+
+
+/* Style for 'Gemini API Key' input box */
+div[data-testid="stTextInput"] div[data-baseweb="input"] {
+    border-radius: 10px;        
+    border: 3px solid rgba(128, 128, 128, 0.2); 
+}
+
+
+/* Change the style when the user clicks (focuses) the box */
+div[data-testid="stTextInput"] div[data-baseweb="input"]:focus-within {
+    border-color: #6d6262;      
+    box-shadow: 0 0 0 2px var(--shadow-color);
+}
+
+/* Target the actual text inside the input */
+div[data-testid="stTextInput"] input {
+    color: #8bb4eb;             
+    font-size: 14px;
+}
+
+
+
+
+/* Style for 'Skip Letter' button */
+div[data-testid="stButton"] button[kind="secondary"] {
+    padding: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 3px solid rgba(128, 128, 128, 0.2); 
+}
+div[data-testid="stButton"] button[kind="secondary"]:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px var(--shadow-hover);
+}
