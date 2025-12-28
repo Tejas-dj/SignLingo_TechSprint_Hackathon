@@ -166,4 +166,4 @@ streamlit run app.py
 ## 👨‍💻 Team
 
 * **Varsha Suresh** - *Second Year Engineering CSE-(AIML), GSSS Institute of Engineering and Technology for Women, Mysore*
-* **Tejas D.Jaiprakash** - *First Year Engineering AIML, BMS College of Engineering (BMSCE), Bengaluru*
+* **Tejas D Jaiprakash** - *First Year Engineering AIML, BMS College of Engineering (BMSCE), Bengaluru*
