@@ -1,16 +1,13 @@
 import streamlit as st
 import time
-import speech_recognition as sr
-import cv2
 import os
 import random
 import hand_tracker 
 import gemini_ai 
-import requests
+import io
 from assets import sign_dictionary
 from streamlit_webrtc import webrtc_streamer, WebRtcMode
 from streamlit_option_menu import option_menu
-from streamlit_lottie import st_lottie
 
 
 
@@ -319,30 +316,7 @@ elif app_mode == "Text to Sign":
                     text_placeholder.info("Space")
                     time.sleep(0.75)
             st.success("Fingerspelling Complete!")
-    
-    st.write("---")
-    st.subheader("🎤 Voice Input")
-    if st.button("🔴 Record Voice"):
-        r = sr.Recognizer()
-        with sr.Microphone() as source:
-            with st.spinner("Listening..."):
-                try:
-                    audio = r.listen(source, timeout=5)
-                    text_output = r.recognize_google(audio)
-                    st.success(f"You said: '{text_output}'")
-                    
-                    words = text_output.lower().split()
-                    found = False
-                    for word in words:
-                        if word in sign_dictionary:
-                            st.image(sign_dictionary[word], width=300, caption=f"Sign for '{word}'")
-                            found = True
-                    
-                    if not found:
-                        st.warning("No matching signs found in database for these words.")
-                    
-                except Exception as e:
-                    st.error("Could not understand audio. Please try again.")
+            
 
 
 

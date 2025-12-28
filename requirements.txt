@@ -8,7 +8,6 @@ opencv-contrib-python-headless==4.10.0.84
 mediapipe==0.10.9
 numpy==1.26.4
 pandas==2.3.3
-SpeechRecognition==3.14.4
 gTTS==2.5.4
 PyAudio==0.2.14
 av==16.0.1
