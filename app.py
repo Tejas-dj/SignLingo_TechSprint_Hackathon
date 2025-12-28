@@ -3,7 +3,6 @@ import time
 import os
 import random
 import hand_tracker 
-import gemini_ai 
 import io
 from assets import sign_dictionary
 from streamlit_webrtc import webrtc_streamer, WebRtcMode
@@ -50,7 +49,6 @@ word_list = load_dictionary()
 
 
 # --- SIDEBAR ---
-
 
 with st.sidebar:
     col1, col2, col3 = st.columns([1,3,1])
