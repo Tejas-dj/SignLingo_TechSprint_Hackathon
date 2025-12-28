@@ -1,6 +1,6 @@
 # 🤟 SignLingo: AI-Powered Bidirectional Sign Language Translator
 
-**SignLingo** is a real-time accessibility tool designed to bridge the communication gap between the Deaf/Hard-of-Hearing community and the hearing world. Built with advanced Computer Vision and Generative AI, it provides seamless **Sign-to-Text** and **Text-to-Sign** translation.
+**SignLingo** is a real-time accessibility tool designed to bridge the communication gap between the Deaf/Hard-of-Hearing community and the hearing world. Built with advanced Computer Vision and trained on an extensive dataset for the best results, it provides seamless **Sign-to-Text** and **Text-to-Sign** translation.
 
 ---
 

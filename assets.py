@@ -1,5 +1,5 @@
 # --- ASSETS DICTIONARY ---
-# We map words to online GIFs. 
+# Words are mapped to online GIFs. 
 sign_dictionary = {
     "hello": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajhxb3Z2M2F6YTd6cWV6dHhrbzVicXVoNnBqNXB0cjE2Nm81bDA1OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKNKOfKlIhbD3gY/giphy.gif", # Generic wave
     "yes": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2RqZXA1dDZ2dDV3MTZqMHc5ZDI5dW53OWE1bjVrNjQxMHY2ajFmYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SVBqUUmmE0ZVKGbYt5/giphy.gif", # Nod

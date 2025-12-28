@@ -4,7 +4,6 @@ from PIL import Image
 from gtts import gTTS 
 
 def configure_gemini(api_key):
-    # Configures the AI with the user's key
     if not api_key:
         return False
     os.environ["GOOGLE_API_KEY"] = api_key
