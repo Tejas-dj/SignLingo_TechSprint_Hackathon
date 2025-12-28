@@ -10,12 +10,10 @@
 * **Custom AI Model:** Uses a custom-trained TensorFlow/Keras Neural Network (trained on the Kaggle ASL Alphabet dataset) to recognize hand gestures with 95%+ accuracy.
 * **Smart Stabilization:** Implements a `Deque` sliding window algorithm to remove "flickering" and ensure smooth letter detection.
 * **Predictive Text:** Auto-complete engine suggests words as you spell (e.g., spelling "P-Y-T" suggests "PYTHON"), significantly speeding up communication.
-* **AI Grammar Correction:** Raw sign outputs (e.g., "ME GO STORE") are converted into fluent English sentences using **Google Gemini 1.5 Flash**.
 
 ### 2. 🤖 Text to Sign (The "Infinite Dictionary")
 * **Visual Translation:** Converts text input into dynamic Sign Language GIFs.
 * **Fingerspelling Engine:** If a word (e.g., "ChatGPT") is not in the GIF database, the system automatically falls back to **Fingerspelling** the word letter-by-letter using a visual asset library.
-* **Voice Input:** Integrated Speech-to-Text allows hearing users to speak into the microphone to generate signs instantly.
 
 ### 3. 🎮 Gamified Learning Mode
 * **Interactive Tutor:** A "Duolingo-style" module that challenges users to mimic specific ASL signs.
@@ -28,8 +26,6 @@
 * **Frontend:** Streamlit (Python)
 * **Computer Vision:** MediaPipe (Hand Landmarks), OpenCV
 * **AI/ML:** TensorFlow (Keras), Scikit-Learn
-* **Generative AI:** Google Gemini API (Grammar Correction)
-* **Speech:** Google SpeechRecognition, gTTS (Google Text-to-Speech)
 * **Hardware Acceleration:** Optimized for NVIDIA RTX GPUs (tested on RTX 3050).
 
 ---
@@ -43,7 +39,6 @@ SignLingo/
 ├── app.py              # Main application entry point (Streamlit)
 ├── assets.py           # Logic for GIF mappings and static assets
 ├── create_dataset.py   # Script to convert raw images into landmark CSV
-├── gemini_ai.py        # AI module for Grammar Correction & TTS
 ├── hand_landmarks.csv  # Processed dataset of 21-point hand coordinates
 ├── hand_tracker.py     # Real-time MediaPipe detection & stability logic
 ├── label_encoder.pkl   # Decodes model predictions back to letters (0->A)
@@ -61,9 +56,13 @@ SignLingo/
 
 ## 🛠️ Prerequisites
 
-This project is strictly dependent on **Python 3.10.0** due to specific library compatibility (MediaPipe/TensorFlow).
+![Python 3.10.0](https://img.shields.io/badge/python-3.10.0-3776AB?logo=python&logoColor=white)
+
+> [!IMPORTANT]
+> This project is **strictly dependent on Python 3.10.0** due to specific library compatibility requirements for **MediaPipe** and **TensorFlow**. 
 
 Before running the project, please ensure you have the correct version installed:
+
 
 1. **Verify your Python version:**
 ```bash
@@ -110,26 +109,15 @@ streamlit run app.py
 
 ---
 
-## 🔑 Configuration & API Key
-
-To fully utilize the **AI Grammar Correction** and **Voice Input** features, the app requires a Google Gemini API Key.
-
-> [!IMPORTANT]
-> **For Judges:**
-> A temporary API key has been provided below for evaluation purposes. Please copy and paste this into the **sidebar** of the application when prompted.
-> **API Key:** `AIzaSyDAUHQgv74CG-svuUweXBeYMqKTjKM3FuU`
-> *(Note: This key is restricted and will be revoked after the hackathon evaluation period.)*
-
----
-
 ## ⚠️ Usage & Limitations
 
 ### ✋ Left-Hand Only Detection
 
-**Important:** The current AI model has been trained exclusively on **left-hand** data.
-
-* ✅ **DO:** Use your **LEFT HAND** to perform sign language gestures.
-* ❌ **DON'T:** Use your right hand; the model will not recognize the gestures accurately.
+> [!WARNING]
+> **The current AI model has been trained exclusively on left-hand data.**
+>
+> * ✅ **DO:** Use your **LEFT HAND** to perform sign language gestures.
+> * ❌ **DON'T:** Use your right hand; the model will may recognize the gestures accurately.
 
 ### 💡 Best Practices
 
@@ -164,13 +152,13 @@ This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 
-* **Kaggle:** For the ASL Alphabet Dataset.
-* **Google:** For the Gemini API and MediaPipe.
+* **Kaggle:** For the comprehensive ASL Alphabet Dataset.
+* **Google:** For MediaPipe.
 * **Streamlit:** For the web framework.
 
 ---
 
 ## 👨‍💻 Team
 
-* **Varsha Suresh** - *Second Year Engineering CSE-(AIML), GSSS*
-* **Tejas D.J** - *First Year Engineering (AIML), BMSCE*
+* **Varsha Suresh** - *Second Year Engineering CSE-(AIML), GSSS Institute of Engineering and Technology for Women, Mysore*
+* **Tejas D.J** - *First Year Engineering AIML, BMS College of Engineering (BMSCE), Bengaluru*
