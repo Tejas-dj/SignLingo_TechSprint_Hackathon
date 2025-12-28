@@ -70,14 +70,6 @@ with st.sidebar:
             "nav-link": {"font-size": "16px", "text-align": "left", "margin": "5px", "padding": "10px"},
         }
     )
-    
-    st.markdown("---")
-    st.markdown("###  Configuration")
-    api_key = st.text_input("Gemini API Key", type="password", help="Enter your Google Gemini API key here")
-
-    if api_key:
-        st.success("✅ System Connected")
-
 
 
 
@@ -204,7 +196,6 @@ elif app_mode == "Sign to Text":
             st.session_state["gesture_history"] = []
             st.rerun()
 
-        translate_btn = st.button("✨ Translate with AI", type="primary", use_container_width=True)
 
     # Logic Loop
     if ctx.video_processor:
@@ -239,22 +230,6 @@ elif app_mode == "Sign to Text":
             """, unsafe_allow_html=True)
         else:
             sentence_display.info("Start signing...")
-
-    
-    if translate_btn:
-        raw_text = " ".join(st.session_state["gesture_history"])
-        if raw_text:
-            with st.spinner("🤖 Gemini is correcting grammar..."):
-                fixed_text = gemini_ai.fix_grammar(raw_text)
-                
-                st.markdown("---")
-                st.success(f"**Original:** {raw_text}")
-                st.markdown(f"### ✨ Polished: **{fixed_text}**")
-                
-                if fixed_text:
-                    audio_bytes = gemini_ai.text_to_speech(fixed_text)
-                    if audio_bytes:
-                        st.audio(audio_bytes, format="audio/mp3")
 
     if ctx.state.playing:
         time.sleep(1.0) 
