@@ -3,6 +3,15 @@
 **SignLingo** is a real-time accessibility tool designed to bridge the communication gap between the Deaf/Hard-of-Hearing community and the hearing world. Built with advanced Computer Vision and trained on an extensive dataset for the best results, it provides seamless **Sign-to-Text** and **Text-to-Sign** translation.
 
 ---
+## 🚀 Live Demo
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://signlingo.streamlit.app/)
+
+> [!TIP]
+> Click the button above to try the application directly in your browser!
+
+---
+
 
 ## 🚀 Key Features
 
@@ -146,10 +155,6 @@ streamlit run app.py
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
 ## 🙏 Acknowledgments
 
 * **Kaggle:** For the comprehensive ASL Alphabet Dataset.
@@ -161,4 +166,4 @@ This project is licensed under the MIT License.
 ## 👨‍💻 Team
 
 * **Varsha Suresh** - *Second Year Engineering CSE-(AIML), GSSS Institute of Engineering and Technology for Women, Mysore*
-* **Tejas D.J** - *First Year Engineering AIML, BMS College of Engineering (BMSCE), Bengaluru*
+* **Tejas D.Jaiprakash** - *First Year Engineering AIML, BMS College of Engineering (BMSCE), Bengaluru*
